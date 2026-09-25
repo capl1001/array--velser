@@ -10,9 +10,15 @@
 // function visNavne(elm) {
 //   section.innerHTML += `<p>${elm}</p>`;
 // }
-const endpoint = "https://kea-alt-del.dk/t7/api/products?limit=20";
+
+const cat = new URLSearchParams(window.location.search).get("cat");
+
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}`;
 
 const produktliste = document.querySelector("section");
+
+const h2 = document.querySelector("h2");
+h2.textContent = cat;
 
 fetch(endpoint)
   .then((res) => res.json())

@@ -10,6 +10,6 @@ function visData(json) {
   console.log(json);
   json.forEach((element) => {
     catlistContainer.innerHTML += `
-    <a href="productlist.html?cat=${element.category}"> ${element.category}</a>`;
+    <a href="productlist.html?cat=${encodeURI(element.category)}"> ${element.category}</a>`;
   });
 }

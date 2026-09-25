@@ -133,3 +133,19 @@ nav {
 .cart:hover {
   text-decoration: underline;
 }
+
+#catlistContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  a {
+    padding: 2rem;
+    background-color: lightblue;
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
