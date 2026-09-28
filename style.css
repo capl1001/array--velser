@@ -141,9 +141,12 @@ nav {
 
   a {
     padding: 2rem;
-    background-color: lightblue;
+    background-color: #a9e0f1;
     text-decoration: none;
-    color: #000;
+    color: #204654;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
   }
   a:hover {
     text-decoration: underline;
@@ -176,8 +179,10 @@ nav {
 
 .tilbudslabel {
   position: absolute;
-  top: 1rem;
+  top: 0.8rem;
   right: 1rem;
   padding: 1rem;
-  background-color: aqua;
+  border-radius: 10px;
+  background-color: #204654;
+  color: beige;
 }
