@@ -29,8 +29,8 @@ article {
 article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 5;
-
+  grid-row: span 6;
+  position: relative;
   background-color: white;
   border: 1px solid #e3ded7;
   padding: 1rem;
@@ -163,12 +163,21 @@ nav {
 
   background-color: #000;
   color: beige;
-  padding: 0.5 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
 .udsolgt {
   pointer-events: none;
+}
+
+.tilbudlabel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: aqua;
 }
