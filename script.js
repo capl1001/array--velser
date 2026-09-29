@@ -17,15 +17,38 @@ const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}`;
 
 const produktliste = document.querySelector("section");
 
+document.querySelectorAll("#filtre button").forEach((knap) => knap.addEventListener("click", filtrer));
+
+function filtrer(e) {
+  console.log(e.target.textContent);
+
+  const valgt = e.target.textContent;
+
+  if (valgt == "Alle") {
+    udsnit = alleData;
+  } else {
+    udsnit = alleData.filter((element) => element.gender == valgt);
+  }
+  console.log(alleData, udsnit);
+
+  visData(udsnit);
+}
+
 const h2 = document.querySelector("h2");
 h2.textContent = cat;
 
+let alleData, udsnit;
+
 fetch(endpoint)
   .then((res) => res.json())
-  .then(visData);
+  .then((data) => {
+    alleData = udsnit = data;
+    visData(data);
+  });
 
 function visData(json) {
   console.log(json);
+  produktliste.innerHTML = "";
   json.forEach((element) => {
     const tilbudspris = Math.round(element.price - (element.price * element.discount) / 100);
     produktliste.innerHTML += `

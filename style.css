@@ -186,3 +186,16 @@ nav {
   background-color: #204654;
   color: beige;
 }
+
+#filtre {
+  margin-bottom: 0.5rem;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+button {
+  color: #204654;
+  border: 1px solid #204654;
+  font: inherit;
+  cursor: pointer;
+}
