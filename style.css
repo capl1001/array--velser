@@ -199,3 +199,18 @@ button {
   font: inherit;
   cursor: pointer;
 }
+
+#filtre button {
+  background-color: #39442b;
+  opacity: 0.5;
+  border: 1px solid #204654;
+  border-radius: 20px;
+  padding: 8px 18px;
+  cursor: pointer;
+  color: beige;
+}
+
+#filtre button:hover {
+  color: #f5f1ec;
+  opacity: 1;
+}

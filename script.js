@@ -17,6 +17,8 @@ const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}`;
 
 const produktliste = document.querySelector("section");
 
+const visantal = document.querySelector("#filtre span");
+
 document.querySelectorAll("#filtre button").forEach((knap) => knap.addEventListener("click", filtrer));
 
 function filtrer(e) {
@@ -47,7 +49,8 @@ fetch(endpoint)
   });
 
 function visData(json) {
-  console.log(json);
+  visantal.textContent = json.length;
+  // console.log(json);
   produktliste.innerHTML = "";
   json.forEach((element) => {
     const tilbudspris = Math.round(element.price - (element.price * element.discount) / 100);
