@@ -187,7 +187,8 @@ nav {
   color: beige;
 }
 
-#filtre {
+#filtre,
+#sortering {
   margin-bottom: 0.5rem;
   justify-content: flex-start;
   gap: 10px;
@@ -200,7 +201,8 @@ button {
   cursor: pointer;
 }
 
-#filtre button {
+#filtre button,
+#sortering button {
   background-color: #39442b;
   opacity: 0.5;
   border: 1px solid #204654;
@@ -210,7 +212,8 @@ button {
   color: beige;
 }
 
-#filtre button:hover {
+#filtre button:hover,
+#sortering button:hover {
   color: #f5f1ec;
   opacity: 1;
 }
