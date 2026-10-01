@@ -2,7 +2,46 @@ body {
   background-color: #f5f1ec;
   margin: 0;
   padding: 2rem;
-  color: #39442b;
+  font-family: Arial, sans-serif;
+}
+
+/* Header*/
+header {
+  background-color: #39442b;
+  padding: 1rem 2rem;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #f5f1ec;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a,
+.cart {
+  color: #f5f1ec;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.cart:hover {
+  text-decoration: underline;
 }
 
 /* Tilbage-knappen */
@@ -15,6 +54,7 @@ body {
   border-radius: 8px;
   color: white;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #backbutton:hover {

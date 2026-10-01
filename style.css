@@ -141,15 +141,21 @@ nav {
 
   a {
     padding: 2rem;
-    background-color: #a9e0f1;
+    /* background-color: #796d3e; */
     text-decoration: none;
-    color: #204654;
+    color: #39442b;
     text-align: center;
     font-size: medium;
     font-weight: bold;
+    border: 3px solid #39442b;
+    border-radius: 10px;
+    transition: tranform 0.2s;
+    transition: font-size 0.2s;
   }
   a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    transform: scale(1.03);
+    font-size: 1.05em;
   }
 }
 
@@ -184,7 +190,7 @@ nav {
   padding: 1rem;
   border-radius: 10px;
   background-color: #204654;
-  color: beige;
+  color: white;
 }
 
 #filtre,
@@ -204,12 +210,12 @@ button {
 #filtre button,
 #sortering button {
   background-color: #39442b;
-  opacity: 0.5;
+  opacity: 0.7;
   border: 1px solid #204654;
   border-radius: 20px;
   padding: 8px 18px;
   cursor: pointer;
-  color: beige;
+  color: white;
 }
 
 #filtre button:hover,
