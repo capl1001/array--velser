@@ -37,14 +37,22 @@ function filtrer(e) {
 
   visData(udsnit);
 }
+
+function beregnPris(element) {
+  if (element.discount) {
+    return Math.round(element.price - (element.price * element.discount) / 100);
+  } else {
+    return element.price;
+  }
+}
 //e=event, viser hvad som bliver kligget på
 function sorter(e) {
   const valgt = e.target.textContent;
   console.log(valgt);
   if (valgt == "Pris lav-høj") {
-    udsnit.sort((a, b) => a.price - b.price);
+    udsnit.sort((a, b) => beregnPris(a) - beregnPris(b));
   } else if (valgt == "Pris høj-lav") {
-    udsnit.sort((a, b) => b.price - a.price);
+    udsnit.sort((a, b) => beregnPris(b) - beregnPris(a));
   } else if (valgt == "A-Z") {
     udsnit.sort((a, b) => a.brandname.localeCompare(b.brandname));
   } else if (valgt == "Z-A") {
@@ -66,7 +74,7 @@ function visData(json) {
   // console.log(json);
   produktliste.innerHTML = "";
   json.forEach((element) => {
-    const tilbudspris = Math.round(element.price - (element.price * element.discount) / 100);
+    const tilbudspris = beregnPris(element);
     produktliste.innerHTML += `
     <a href=productdetails.html?id=${element.id} class=${element.soldout ? "udsolgt" : ""}>
     <article class="card">
